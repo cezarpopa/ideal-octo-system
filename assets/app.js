@@ -1,12 +1,13 @@
-/*
- * Welcome to your app's main JavaScript file!
- *
- * We recommend including the built version of this JavaScript file
- * (and its CSS file) in your base layout (base.html.twig).
- */
+import Vue from "vue";
+import App from "./js/views/App";
+import './js/imports';
+import router from "./js/router/";
+import './js/registerServiceWorker';
 
-// any CSS you import will output into a single css file (app.css in this case)
-import './styles/app.css';
+Vue.config.productionTip = false
 
-// start the Stimulus application
-import './bootstrap';
+new Vue({
+    router,
+    el: '#app',
+    render: h => h(App)
+}).$mount('#app');

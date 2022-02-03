@@ -1,0 +1,44 @@
+# curl 'https://localhost:8000/api/jobs/new'
+#  -H 'authority: localhost:8000'
+#  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"'
+#  -H 'accept: application/json, text/plain, */*'
+#  -H 'dnt: 1'
+#  -H 'content-type: application/json'
+#  -H 'sec-ch-ua-mobile: ?0'
+#  -H 'user-agent: Mozilla/5.0 (X11; Fedora; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36'
+#  -H 'sec-ch-ua-platform: "Linux"'
+#  -H 'origin: https://127.0.0.1:8000'
+#  -H 'sec-fetch-site: cross-site'
+#  -H 'sec-fetch-mode: cors'
+#  -H 'sec-fetch-dest: empty'
+#  -H 'referer: https://127.0.0.1:8000/'
+#  -H 'accept-language: en,ro;q=0.9'
+#  --data-raw '{"email":"cezar@debian.org","firstName":"Cezar","lastName":"Popa","description":"Testing the api","property":4}'
+#  --compressed
+
+POST https://localhost:8000/api/jobs/new
+authority: localhost:8000
+sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"
+accept: application/json, text/plain, */*
+dnt: 1
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (X11; Linux; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36
+sec-ch-ua-platform: "Linux"
+origin: https://127.0.0.1:8000
+sec-fetch-site: cross-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: https://127.0.0.1:8000/
+accept-language: en,ro;q=0.9
+Content-Type: application/json
+
+{
+  "email": "cezar@debian.org",
+  "firstName": "Cezar",
+  "lastName": "Popa",
+  "description": "Testing the api",
+  "property": 4
+}
+
+###
+
