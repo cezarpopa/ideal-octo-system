@@ -9,7 +9,9 @@
         "dev-server": "encore dev-server",
         "build:dev": "encore dev",
         "build:watch": "encore dev --watch",
-        "build:prod": "encore production --progress"
+        "build:prod": "encore production --progress",
+        "test:unit": "vue-cli-service test:unit",
+        "test:e2e": "vue-cli-service test:e2e"
     },
     "dependencies": {
         "axios": "^0.25.0",
