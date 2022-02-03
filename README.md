@@ -1,7 +1,6 @@
-### Starting the project
+### Acme App
 
 Prerequisites:
-
 ```
 PHP 8.0.1  
 Symfony CLI
@@ -11,6 +10,9 @@ Docker
 Docker Compose
 Node
 ```
+
+Optional
+```vue-cli```
 
 ### Starting the project
 
