@@ -35,7 +35,7 @@ class JobsController extends AbstractController
 
         $form->submit($data);
 
-        if ( ! $form->isSubmitted() || ! $form->isValid()) {
+        if (! $form->isSubmitted() || ! $form->isValid()) {
             return new JsonResponse(
                 json_encode([Response::HTTP_BAD_REQUEST]),
                 Response::HTTP_OK,

@@ -1,9 +1,9 @@
-import Jobs from "../views/Open/Jobs";
-import NewJob from "../views/Open/NewJob";
-import Properties from "../views/Open/Properties";
-import PageNotFound from "../views/Open/PageNotFound";
+import Jobs from '../views/Open/Jobs';
+import NewJob from '../views/Open/NewJob';
+import Properties from '../views/Open/Properties';
+import PageNotFound from '../views/Open/PageNotFound';
 
-export const routes  = [
+const routes = [
   {
     path: '/',
     name: 'Home',
@@ -21,7 +21,9 @@ export const routes  = [
   },
   {
     path: '/:catchAll(.*)*',
-    name: "PageNotFound",
+    name: 'PageNotFound',
     component: PageNotFound,
   },
 ];
+
+export default routes;
