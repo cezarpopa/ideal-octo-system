@@ -80,6 +80,9 @@
         "symfony/polyfill-php80": "*"
     },
     "scripts": {
+        "phpcs": "phpcs",
+        "phpcbf": "phpcbf",
+        "phpmd": "phpmd ./src text phpmd.xml --exclude 'tests/*,vendor/*'",
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
@@ -101,8 +104,10 @@
         }
     },
     "require-dev": {
-        "roave/security-advisories": "dev-latest",
         "doctrine/doctrine-fixtures-bundle": "^3.4",
+        "phpmd/phpmd": "@stable",
+        "roave/security-advisories": "dev-latest",
+        "squizlabs/php_codesniffer": "*",
         "symfony/debug-bundle": "6.0.*",
         "symfony/maker-bundle": "^1.0",
         "symfony/stopwatch": "6.0.*",
