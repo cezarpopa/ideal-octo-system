@@ -33,7 +33,7 @@ class JobFormType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => Job::class,
-            "csrf_protection" =>false,
+            "csrf_protection" => false,
         ]);
     }
 }

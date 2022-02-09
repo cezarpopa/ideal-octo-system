@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\DataFixtures;
@@ -18,7 +19,7 @@ class PropertyFixtures extends Fixture
                        ->many(5)
                        ->create();
 
-        JobFactory::createMany(100, static function() use ($properties) {
+        JobFactory::createMany(100, static function () use ($properties) {
             return [
                 'property' => $properties[array_rand($properties)]
             ];
