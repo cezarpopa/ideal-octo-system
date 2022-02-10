@@ -15,19 +15,19 @@ abstract class AbstractApiController extends AbstractController
 
     protected ?int $httpStatusOverride;
 
-    private int $httpResponse;
+    private int $httpStatus;
 
     public function __construct(SerializerInterface $serializer)
     {
         $this->serializer = $serializer;
         $this->httpStatusOverride = null;
-        $this->httpResponse = Response::HTTP_OK;
+        $this->httpStatus = Response::HTTP_OK;
     }
 
     public function handleApiResponse(array $responseData): JsonResponse {
         return new JsonResponse(
             $this->serializeResponseData($responseData),
-            (int) ($this->httpStatusOverride ?? $this->httpResponse),
+            (int) ($this->httpStatusOverride ?? $this->httpStatus),
             [],
             true,
         );
