@@ -1,8 +1,6 @@
 name: composer update
 
-on:
-  schedule:
-    - cron: '0 0 * * *' #UTC
+on: workflow_dispatch
 
 jobs:
   composer_update_job:
